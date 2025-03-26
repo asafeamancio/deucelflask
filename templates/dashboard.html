@@ -1,0 +1,28 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard - DEUCEL</title>
+</head>
+<body>
+  <h1>Dashboard</h1>
+  <a href="/logout">Sair</a> | <a href="/nova">Nova OS</a>
+  <h2>Ordens de Serviço</h2>
+  <table border="1">
+    <tr>
+      <th>ID</th><th>Cliente</th><th>Contato</th><th>Marca</th><th>Serviço</th><th>Relato</th>
+    </tr>
+    {% for os in ordens %}
+    <tr>
+      <td>{{ os.id }}</td>
+      <td>{{ os.cliente }}</td>
+      <td>{{ os.contato }}</td>
+      <td>{{ os.marca }}</td>
+      <td>{{ os.servico }}</td>
+      <td>{{ os.relato }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>
